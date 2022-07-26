@@ -9,11 +9,14 @@ body,html{
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-
+	font-family: 'M PLUS 1 Code', sans-serif;
 }
 .header{
 
-	background: rgb(221, 220, 217, 0.5);
+	background: #064273;
+}
+.logo img{
+	padding-top: 10px;
 }
 nav{
 flex: 1;
@@ -36,27 +39,51 @@ ul li{
 	list-style-type: none;
 	display: inline-block;	
 	padding: 20px;
-	font-size: 30px;
+	font-size: 20px;
+	
+
 }
 a{
 	text-decoration: none;
+	color : #7fcdff;
+}
+.myportfolio li{
+	background-color: #1da2d8;
+
+}
+.myportfolio a{
+	color: #064273;
+	font: bold;
+	
+}
+.midcontainer{
+	width: 1000;  
+	justify-content: center;
+	display: grid;
+ 	text-align: center;
+ 	margin-top: 15%;
+
 }
 
+
 .footer{
-	background-color: rgb(174, 173, 182, 0.5);
+	background-color: #00aa99;
+	opacity: 0.8;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	padding: 5px;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
 	display: inline-block;
 }
 .contact ul li{
 
-	 font-size: 15px;
+	 font-size: 10px;
 	 margin-left: 50px;
 }
 h5{
-	font-size: 30px;
+	font-size: 20px;
 	
 	border-bottom-style: solid;
 }
