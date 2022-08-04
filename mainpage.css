@@ -5,17 +5,19 @@ box-sizing : border-box;
 
 }
 body,html{
-	background-image: url(images/background.jpg);
-	background-size: cover;
-	height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	    font-family: 'Quicksand', sans-serif;
-
+	background-color: #1a1a1e;
+	font-family: 'Quicksand', sans-serif;
+	position: relative;
+}
+body::after {
+  content: '';
+  display: block;
+  height: 50px; /* Set same as footer's height */
 }
 
 .logo img{
 	padding-top: 10px;
+
 }
 nav{
 flex: 1;
@@ -26,6 +28,7 @@ display : flex;
 align-items : center;
 margin-left: 30px;
 margin-right: 30px;
+
 }
 .user{
 
@@ -33,6 +36,9 @@ margin-right: 30px;
 .mid-nav{
 	text-align: center;
 }
+
+
+
 ul li{
 	text-align: center;
 	list-style-type: none;
@@ -46,7 +52,7 @@ button{
 	border-color: #7fcdff;
 	padding: 10px;
 	background-color: transparent;
-
+	box-shadow: 0 0 5px 2px #7fcdff;
 }
 button:hover{
 	transform: translateY(5px);
@@ -56,26 +62,10 @@ a{
 	text-decoration: none;
 	color : #7fcdff;
 }
-
-/*.myportfolio li{
-	border-style: inset;
-	border-color: #7fcdff;
+.middle{
+	padding-bottom: 100px;
 
 }
-.myportfolio ul:hover{
-	background-color: #064273;
-	transition: 0.5s;
-}
-.myportfolio a:hover{
-	color: #7fcdff;
-	transition: 0.5s;
-}
-.myportfolio a{
-	color: white;
-	font: bolder;
-	font-size: 30px;
-}*/
-
 .midcontainer{
 	width: 1000;  
 	display: grid;
@@ -84,6 +74,7 @@ a{
  	margin-left: 10%;
 
 }
+
 .about_me p{
 	margin-left: 10px;
 	background: #7fcdff;
@@ -95,6 +86,8 @@ a{
 	font-size: 14px;
 	color: #064273;
 }
+
+
 .about_me h1{
 	
 	
@@ -121,17 +114,98 @@ a{
 	color: #76b6c4;
 	margin-left: -20px;
 }
+.myWork{
+	text-align: center;
+}
+span{
+	color: #76b6c4;
+}
+span:before{
+	content: "My games";
+	animation: animate infinite 5s;
+
+}
+@keyframes animate{
+
+	50%{
+		content: "Created";
+	}
+	75%{
+		content: "in";
+	}
+	100%{
+		content: "Unity";
+	}
+}
+.container-2{
+	margin: 10px;
+	margin-bottom: 100px;
+	background-color: #181616;
+}
+.mygames li:hover{
+	transition: 0.5s;
+	transform: scale3d(2.0, 2.0, 1.0);
+	/*transform: translate3d(10px,10px, 10px);*/
+}
+.line1{
+	padding-bottom: 10px;
+	border: 10px;
+	margin-left: auto;
+	margin-left: 35%;
+	margin-right: 35%;
+	border-top-color: #7fcdff;
+	border-top-style: solid;
+
+}
+.line2{
+	border: 5px;
+	margin-left: 15%;
+	margin-right: 45%;
+	border-top-style: solid;
+	color: #76b6c4;
+}
+.line3{
+	border: 5px;
+	margin-left: 45%;
+	margin-right: 15%;
+	border-top-style: solid;
+	color: #76b6c4;
+}
+
+
+.container-1{
+	float: right;
+	margin-right: 10%;
+	margin-left: 50%;
+	margin-bottom: 100px;
+}
+.paragraph{
+	text-align: center;
+	float: right;
+}
+.paragraph h1{
+	font-size: 50px;
+	padding-left: 10px;
+	text-align: left;
+	padding-bottom: 10px;
+	color: #064273;
+}
+.paragraph p{
+	font-style: italic;
+	text-align: left;
+	color: #7fcdff;
+}
 
 .footer{
 	background-color: #000000;
+	margin: auto;
 	opacity: 0.8;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	width: 100%;
 	padding-top: 5px;
 	padding-left: 30px;
 	padding-right: 30px;
-	
 }
 .contact ul li{
 	 font-size: 10px;
