@@ -2,12 +2,14 @@
 margin : 0;
 padding : 0;
 box-sizing : border-box;
-
 }
+
 body,html{
 	background-color: #1a1a1e;
 	font-family: 'Quicksand', sans-serif;
 	position: relative;
+	
+	
 }
 body::after {
   content: '';
@@ -137,12 +139,22 @@ span:before{
 		content: "Unity";
 	}
 }
-.container-2{
-	margin: 10px;
-	margin-bottom: 100px;
+/*.container-2{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 70px;
 	background-color: #181616;
+}*/
+.work-container{
+	margin: 100px 100px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
 }
-.mygames li:hover{
+.work-container img{
+	border-radius: 30px;
+}
+.work-container a:hover{
 	transition: 0.5s;
 	transform: scale3d(2.0, 2.0, 1.0);
 	/*transform: translate3d(10px,10px, 10px);*/
@@ -174,21 +186,22 @@ span:before{
 
 
 .container-1{
-	float: right;
+	float: left;
 	margin-right: 10%;
-	margin-left: 50%;
+	margin-left: 10%;
 	margin-bottom: 100px;
 }
 .paragraph{
-	text-align: center;
-	float: right;
+	margin-bottom: 100px;
 }
+
 .paragraph h1{
 	font-size: 50px;
 	padding-left: 10px;
 	text-align: left;
 	padding-bottom: 10px;
 	color: #064273;
+
 }
 .paragraph p{
 	font-style: italic;
@@ -199,25 +212,27 @@ span:before{
 .footer{
 	background-color: #000000;
 	margin: auto;
-	opacity: 0.8;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	padding-top: 5px;
 	padding-left: 30px;
 	padding-right: 30px;
 }
-.contact ul li{
-	 font-size: 10px;
-	 margin-left: 50px;
-	 color: white;
+.footer_container{
+	float: right;
 }
-h5{
-	font-size: 20px;
-	color: white;
-	border-bottom-style: solid;
+.footer_container h4{
+	font-weight: 400;
+	color: #FFFFFF;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	 font-family: monospace;
 }
+.footer_list{
 
+
+}
 @media(max-width: 576px){
 	.header{
 		background-color: #05064273;
@@ -225,46 +240,53 @@ h5{
 	ul li{
 		color: #7fcdff;
 	}
+	.footer_container{
+		float: none;
+		text-align: center;
+	}
 	
 }
-@media (max-width: 390px){
-	body,html{
+@media screen and (max-width: 290px){
+	html,body{
 		position: fixed;
+	}
+	.mygames img{
+		width: 30px;
 	}
 	
 
-}@media screen and (max-width: 576px){
+}
+
+@media screen and (min-width: 290px) and (max-width: 576px){
 	.midcontainer{
 	width: 1000;  
 	display: grid;
  	text-align: left;
  	margin-top: 40%;
  	margin-left: 50px;
-}
+	}
+	.container-1{
+	margin: 10%;
+	margin-bottom: 100px;
+	}
+	.mygames img{
+		width: 90px;
+	}
 
-}
-@media (max-width: 390px){
-	
 
-}
-@media (orientation: landscape) and (min-width: 390px) and (max-width: 768px){
-	
 
 }
 @media only screen and (max-width: 768px) {
 	nav ul {
+
 	position : absolute;
-	top : 70px;
+	top : 90px;
 	left : 0;
 	background : #333;
 	width : 100%;
 }
-	
-}
-
-	.footer{
+		.footer{
 	background-color: #000000;
-	opacity: 0.8;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
@@ -272,17 +294,6 @@ h5{
 	padding-left: 15px;
 	padding-right: 15px;
 	}
-	.contact ul li{
-	 font-size: 7px;
-	 color: white;
-}
-h5{
-	text-align: center;
-	font-size: 12px;
-
-	color: white;
-	border-bottom-style: solid;
-}
 
 } 
 /*@media queries sm {{
